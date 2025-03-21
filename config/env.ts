@@ -4,4 +4,4 @@ export const config = {
     channelName: Deno.env.get("CHANNEL_USERNAME"),
     adminId: 5190902724,
     guerrillaMailAPI: "https://api.guerrillamail.com/ajax.php",
-  };
+  }; 
