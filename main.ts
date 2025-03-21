@@ -1,18 +1,16 @@
-import { handleUpdate } from "./handlers/index.ts";
+import { serve } from "https://deno.land/std@0.195.0/http/server.ts";
+import { BotController } from "./controllers/bot.controller.ts";
 
-addEventListener("fetch", (event) => {
-  event.respondWith(
-    (async () => {
-      try {
-        if (event.request.method === "POST") {
-          const update = await event.request.json();
-          await handleUpdate(update);
-        }
-        return new Response("OK");
-      } catch (error) {
-        console.error("Global error:", error);
-        return new Response("Error", { status: 500 });
-      }
-    })()
-  );
+serve(async (req) => {
+  if (req.method === "POST") {
+    try {
+      const update = await req.json();
+      await BotController.handleUpdate(update);
+    } catch (error) {
+      console.error("Update error:", error);
+    }
+  }
+  return new Response("OK");
 });
+
+console.log("🔥 Temp Mail Bot Running");
