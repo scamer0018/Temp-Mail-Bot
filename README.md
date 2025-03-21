@@ -1,6 +1,6 @@
 # 🌟 Give it a star 🌟
 
-🧑💻 Developed by [Developer](tg://user?id=5190902724)  
+🧑💻 Developed by [Developer](https://t.me/Prime_Hritu)  
 📢 Updates Channel: [Private Bots](https://t.me/Private_Bots)
 
 [![Deploy](https://img.shields.io/badge/Deploy%20To-Deno%20Deploy-blue?style=flat&logo=deno)](https://dash.deno.com/new)
