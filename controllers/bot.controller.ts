@@ -81,7 +81,8 @@ export const BotController = {
           "❌ *Please join our channel to use this bot:* [@Private_Bots](https://t.me/Private_Bots)",
           {
             parse_mode: "Markdown",
-            reply_markup: KEYBOARDS.joinChannel
+            reply_markup: KEYBOARDS.joinChannel,
+            disable_web_page_preview: true
           }
         );
       }

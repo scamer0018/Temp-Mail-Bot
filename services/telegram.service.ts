@@ -4,6 +4,7 @@ import { InlineKeyboardMarkup } from "../types/telegram-types.ts";
 interface MessageOptions {
   parse_mode?: "Markdown" | "HTML";
   reply_markup?: InlineKeyboardMarkup;
+  disable_web_page_preview?: true | false;
 }
 
 const API_URL = `https://api.telegram.org/bot${BOT_TOKEN}`;
