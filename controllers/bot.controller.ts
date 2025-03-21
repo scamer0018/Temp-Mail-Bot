@@ -31,7 +31,6 @@ const KEYBOARDS = {
   message: {
     inline_keyboard: [
       [
-        { text: "View message", callback_data: "view_msg" },
         { text: "Refresh", callback_data: "refresh" },
         { text: "Close", callback_data: "close" }
       ]
@@ -89,7 +88,7 @@ export const BotController = {
 
       await TelegramService.sendMessage(
         chatId,
-        `*Welcome to Temp Mail Bot!* 🚀\n` +
+        `*Welcome to Temp Mail Bot!* 🚀\n\n` +
         `_Generate disposable emails and receive messages directly here._`,
         {
           parse_mode: "Markdown",
@@ -189,7 +188,7 @@ export const BotController = {
               `📬 *New Message*\n` +
               `From: ${content.mail_from}\n` +
               `Subject: ${content.mail_subject}\n\n` +
-              `${content.mail_body.slice(0, 500)}...`,
+              `${content.mail_body}`,
               {
                 parse_mode: "Markdown",
                 reply_markup: KEYBOARDS.message
