@@ -12,7 +12,7 @@ const KEYBOARDS = {
       [
         { 
           text: "> Updates Channel <", 
-          url: "https://t.me/Private_Bots" 
+          url: "https://t.me/NexonBots" 
         }
       ],
       [{ 
@@ -54,7 +54,7 @@ const KEYBOARDS = {
       [
         { 
           text: "Join Channel", 
-          url: "https://t.me/Private_Bots" 
+          url: "https://t.me/NexonBots" 
         }
       ],
       [{ 
@@ -93,7 +93,7 @@ export const BotController = {
       if (!isSubscribed) {
         return TelegramService.sendMessage(
           chatId,
-          "❌ *Please join our channel to use this bot:* [@Private_Bots](https://t.me/Private_Bots)",
+          "❌ *Please join our channel to use this bot:* [@NexonBots](https://t.me/NexonBots)",
           {
             parse_mode: "Markdown",
             reply_markup: KEYBOARDS.joinChannel,
