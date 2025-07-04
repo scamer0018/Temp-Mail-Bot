@@ -25,6 +25,7 @@ export const MONGO_URI = (() => {
   
   return uri;
 })();
+console.log(MONGO_URI);
 
 export const USE_DB = Boolean(MONGO_URI);
 export const CLEAN_USERNAME = CHANNEL_USERNAME.replace(/@/g, '');
